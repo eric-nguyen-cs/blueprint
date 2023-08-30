@@ -563,7 +563,7 @@ export const DateInput: React.FC<DateInputProps> = React.memo(function _DateInpu
 
             props.inputProps?.onKeyDown?.(e);
         },
-        [inputValue, parseDate, props.inputProps?.onKeyDown],
+        [inputValue, isOpen, parseDate, props.inputProps?.onKeyDown],
     );
 
     // Main render
@@ -607,6 +607,7 @@ export const DateInput: React.FC<DateInputProps> = React.memo(function _DateInpu
         [
             fill,
             formattedDateString,
+            handleInputKeyDown,
             inputValue,
             isInputFocused,
             isTimezoneSelectDisabled,
